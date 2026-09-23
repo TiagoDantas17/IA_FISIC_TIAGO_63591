@@ -12,6 +12,6 @@ public class MoveShell : MonoBehaviour
 
     void Update()
     {
-        this.transform.transform.Translate(0, Time.deltaTime * speed * 0.5f, Time.deltaTime * speed);
+        this.transform.Translate(0, 0, Time.deltaTime * speed);
     }
 }
