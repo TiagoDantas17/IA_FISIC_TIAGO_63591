@@ -138,6 +138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::FireShell
   bullet: {fileID: 3955288210666247646, guid: b0105bbd9e0f24245ab067b36c63e969, type: 3}
   turret: {fileID: 1270396279}
+  enemy: {fileID: 620903246}
 --- !u!4 &350893525 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2887154942990734001, guid: e57a33c6f3b0e4cb2a2af014c265b239, type: 3}
@@ -160,7 +161,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1bb9c603107c642de9ef047fa6765497, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 3
   rotationSpeed: 100
 --- !u!65 &620903249
 BoxCollider:
