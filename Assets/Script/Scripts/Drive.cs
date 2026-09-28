@@ -9,6 +9,9 @@ public class Drive : MonoBehaviour
 	public Transform transGun;
 	public Transform gun;
 	public GameObject bulletObj;
+
+
+
 	void Update()
 	{
 		// Get the horizontal and vertical axis.
@@ -18,8 +21,8 @@ public class Drive : MonoBehaviour
 		float rotation = Input.GetAxis("Horizontal") * rotationSpeed;
 
 		// Make it move meters per second instead of meters per frame
-		translation = Time.deltaTime;
-		rotation = Time.deltaTime;
+		translation *= Time.deltaTime;
+		rotation *= Time.deltaTime;
 
 		// Move translation along the object's z-axis
 		transform.Translate(0, 0, translation);
