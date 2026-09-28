@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc449ca590f5b7249a849a7ba48d4107, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FireShell
-  bullet: {fileID: 3955288210666247646, guid: b0105bbd9e0f24245ab067b36c63e969, type: 3}
+  bullet: {fileID: 3955288210666247646, guid: f7343c7296300d047b1ef3ad341cbe37, type: 3}
   turret: {fileID: 1270396279}
   enemy: {fileID: 620903246}
   turretBase: {fileID: 1354003426666338539}
