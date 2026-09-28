@@ -4,27 +4,33 @@ using UnityEngine;
 
 public class Shell : MonoBehaviour
 {
-    public GameObject explosion;
+	public GameObject explosion;
+	public float speed = 3f;
+	public float mass = 10;
+	public float force = 1000;
+	public float acceleration;
 
-    void OnCollisionEnter(Collision col)
-    {
-        if (col.gameObject.tag == "tank")
-        {
-            GameObject exp = Instantiate(explosion, this.transform.position, Quaternion.identity);
-            Destroy(exp, 0.5f);
-            Destroy(this.gameObject);
-        }
-    }
+	void OnCollisionEnter(Collision col)
+	{
+		if (col.gameObject.tag == "tank")
+		{
+			GameObject exp = Instantiate(explosion, this.transform.position, Quaternion.identity);
+			Destroy(exp, 0.5f);
+			Destroy(this.gameObject);
+		}
+	}
 
-    // Start is called before the first frame update
-    void Start()
-    {
+	// Start is called before the first frame update
+	void Start()
+	{
 
-    }
+	}
 
-    // Update is called once per frame
-    void LateUpdate()
-    {
-
-    }
+	// Update is called once per frame
+	void LateUpdate()
+	{
+		acceleration = force / mass;
+		speed += acceleration * Time.deltaTime;
+		this.transform.Translate(0, 0, speed * Time.deltaTime);
+	}
 }
